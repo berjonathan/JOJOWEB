@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UX-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - JONATHAN</title>
+    <script src="https://kit.fontawesome.com/c5ba6693a3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="IMAGES/fix.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#mywork">SUMMARY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <i class="fas fa-solid fa-xmark" style="color: #ffffff;" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>        </nav>
+        <div class="header-text">
+            <p>Industrial Informatics</p>
+            <h1>Hi, I'm <span>Jonathan Rafael</span><br>a POLMAN student </h1>
+        </div>
+    </div>
+ </div>
+ 
+ <!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMAGES/FORMAL_MERAH.png" alt="">
+            </div>
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi my name is Jonathan Rafael and i'm a student at Politeknik Manufactur Bandung, Indonesia. Born in Bandung Indonesia at 12 June 2005</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web interfaces</li>
+                        <li><span>Web Development</span><br>full stack development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - 2023</span><br>SMA Santa Maria 1 Bandung</li>
+                        <li><span>2023 - NOW</span><br>Politeknik Manufactur Bandung</li>                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--mywork-->
+<div id="mywork">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="IMAGES/T1.jpg" alt="TUGAS 1">
+                <div class="layer">
+                    <h3>TUGAS 1</h3>
+                    <p>Perancangan Website yang memiliki fungsi utama mengumpulkan tugas-tugas yang diberikan</p>
+                    <a href="#"><img src="IMAGES/external-link.png" alt="link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/T2.jpg" alt="TUGAS 2">
+                <div class="layer">
+                    <h3>TUGAS 2</h3>
+                    <p>Tugas teori menghitung R dan I dari rangkaian warna yang diberikan</p>
+                    <a href="#"><img src="IMAGES/external-link.png" alt="link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/T3.jpg" alt="TUGAS 3">
+                <div class="layer">
+                    <h3>TUGAS 3</h3>
+                    <p>Tugas percobaan menggunakan proteus dengan mengikuti modul</p>
+                    <a href="#"><img src="IMAGES/external-link.png" alt="link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">See more</a>
+    </div>
+</div>
+
+
+<script>
+function opentab(tabname) {
+    const tablinks = 
+    document.getElementsByClassName("tab-links");
+    const tabcontents =
+    document.getElementsByClassName("tab-contents");
+
+    for (const tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+    for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+}
+   
+
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
